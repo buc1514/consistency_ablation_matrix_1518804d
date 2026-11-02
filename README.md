@@ -1,4 +1,4 @@
-# consistency_ablation_matrix_1518804d
+# proxy_request_forgery_ablation
 
 （代理层的请求伪造风险场景）代理层的请求伪造风险的噪声会不会盖住真实差异？用口径一致性比对比较噪声幅度与效应幅度。
 
@@ -15,9 +15,9 @@
 仅依赖 Python 标准库。
 
 ```bash
-python consistency_ablation_matrix_1518804d.py --help
-python consistency_ablation_matrix_1518804d.py --input sample.txt
-python consistency_ablation_matrix_1518804d.py --input sample.txt --json
+python proxy_request_forgery_ablation.py --help
+python proxy_request_forgery_ablation.py --input sample.txt
+python proxy_request_forgery_ablation.py --input sample.txt --json
 ```
 
 输入文件按行解析。协议「消融矩阵」使用分隔符 `,` 区分标签与载荷。
@@ -50,7 +50,7 @@ python consistency_ablation_matrix_1518804d.py --input sample.txt --json
 ## 复现步骤
 
 1. 按上面的分隔符准备输入文件，每行一条样本；
-2. 运行 `python consistency_ablation_matrix_1518804d.py --input sample.txt --json`；
+2. 运行 `python proxy_request_forgery_ablation.py --input sample.txt --json`；
 3. 记录运行环境、输入文件与完整输出；
 4. **未运行的指标不要引用**：本仓库只提供测量方法与判定规则，
    不预填任何实测数字。填入实测值前请确认对应命令与输入一致。
